@@ -1,5 +1,5 @@
 name: 01 - Buidin Blocks
-on: push //informa que sempre que for feito um push , ele executa o fluxo de trabalho
+on: push 
 jobs:
   echo-hello:
     runs-on: ubuntu-latest
@@ -10,6 +10,8 @@ jobs:
     runs-on:  ubuntu-latest
     steps:
       - name: FaILED STEP
-        run: echo "Will fail" exit 1
+        run: | #Usado para script de multiplas linhas
+          echo "Will fail" 
+          exit 1
       - name: Say goodbaye
        run: echo "Goodbaye"

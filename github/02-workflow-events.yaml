@@ -1,0 +1,10 @@
+name: 02 - Workflow Events
+
+on: push
+
+jobs:
+  echo:
+    runs-on: ubuntu-lastet
+    steps:
+      - name: Show the trigger
+        run: echo "Acionado pelo evento ${{github.event_name }} ."
