@@ -1,7 +1,11 @@
 name: 02 - Workflow Events
 
-on: push
-
+on: 
+  push:
+    pull_request:
+      schedule: 
+        - cron: '* */5 * * *' #Verificação a cada 5 minutos
+      workflow_dispatch: #permite acionar o fluxo apartir da interface do usuario
 jobs:
   echo:
     runs-on: ubuntu-lastet
