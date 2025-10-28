@@ -5,10 +5,12 @@ on:
     pull_request:
       schedule: 
         - cron: '* */5 * * *' #Verificação a cada 5 minutos
+     
       workflow_dispatch: #permite acionar o fluxo apartir da interface do usuario
+
 jobs:
   echo:
-    runs-on: ubuntu-lastet
+    runs-on: ubuntu-latest
     steps:
       - name: Show the trigger
         run: echo "Acionado pelo evento ${{github.event_name }} ."
