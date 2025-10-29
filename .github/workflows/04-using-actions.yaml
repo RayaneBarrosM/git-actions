@@ -1,0 +1,15 @@
+name: 04-using-actions
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/chekout@4
+              name: Printing Folder
+              run: ls
+        #. checa o codigo do repositorio
+        # 1. intala dependencias da aplicação em react
+        # 2. executa testes automaticos
